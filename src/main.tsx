@@ -1,10 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
+
+// React.StrictMode - это инструмент для выявления потенциальных проблем в приложении. В режиме разработки он намеренно вызывает двойной рендер компонентов, чтобы помочь обнаружить побочные эффекты в логике рендеринга.
+
+// Это нормальное поведение в режиме разработки и не влияет на производительность в продакшн-сборке. Двойной рендер помогает выявить проблемы с:
+// 1. Нечистыми функциями рендеринга
+// 2. Устаревшими методами жизненного цикла
+// 3. Неожиданными побочными эффектами
+
+// Если хочется видеть только один рендер во время разработки, вы надо удалить обертку React.StrictMode.
+
+// Однако рекомендуется оставить StrictMode включенным во время разработки, так как он помогает выявлять потенциальные проблемы в коде.
